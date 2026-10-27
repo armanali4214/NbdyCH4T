@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NbdyCH4T</title>
+<style>
+:root{--bg:#09070e;--panel:#15101f;--panel2:#21172f;--line:#3c2855;--purple:#a66aff;--text:#f5efff;--muted:#b1a1c5;--danger:#ff6f87}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#291343,transparent 38%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}button,input,textarea{font:inherit}button{border:1px solid var(--line);background:#291b3b;color:var(--text);border-radius:10px;padding:10px 13px;cursor:pointer}button:hover{border-color:var(--purple)}button:disabled{opacity:.5;cursor:not-allowed}input,textarea{width:100%;padding:11px;background:#0d0914;color:var(--text);border:1px solid var(--line);border-radius:10px;outline:none}input:focus,textarea:focus{border-color:var(--purple)}.primary{background:#6f38bd;border-color:#a66aff}.muted{color:var(--muted)}.small{font-size:11px}.hidden{display:none!important}.brand{font-size:22px;font-weight:900;letter-spacing:1px}.brand span{color:var(--purple)}.shell{max-width:1250px;margin:auto;padding:14px}.auth{width:min(460px,100%);margin:7vh auto;background:#15101fee;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 20px 80px #0008}.auth h1{margin:0 0 8px}.field{margin:14px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.actions{display:flex;gap:8px;flex-wrap:wrap}.status{font-size:12px;line-height:1.8;margin-top:12px;min-height:22px;color:#d5b8ff}.app{height:calc(100vh - 28px);min-height:520px;display:grid;grid-template-columns:320px minmax(0,1fr);gap:12px}.side,.main{background:#15101fee;border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:0}.side{display:flex;flex-direction:column;padding:14px;gap:12px}.profile{display:flex;align-items:center;gap:10px;padding:10px;background:#21172f;border:1px solid var(--line);border-radius:12px}.avatar{width:40px;height:40px;border-radius:12px;background:linear-gradient(140deg,#a66aff,#30144b);display:grid;place-items:center;font-weight:bold;flex-shrink:0}.profile-info{min-width:0;flex:1}.profile-info b,.profile-info small{display:block;overflow:hidden;text-overflow:ellipsis}.profile-info small{color:var(--muted);margin-top:5px}.section-title{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin:4px 0}.list{display:flex;flex-direction:column;gap:6px;overflow:auto;min-height:70px}.group-item{display:flex;align-items:center;gap:9px;text-align:right;background:transparent;border-color:transparent;width:100%}.group-item.active,.group-item:hover{background:#2a1b3a;border-color:var(--line)}.group-item .info{min-width:0;flex:1}.group-item b,.group-item small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.group-item small{font-size:10px;color:var(--muted);margin-top:4px}.side-bottom{margin-top:auto;display:flex;gap:7px}.main{display:flex;flex-direction:column}.top{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-bottom:1px solid var(--line);gap:12px}.chat-title{min-width:0}.chat-title b,.chat-title small{display:block;overflow-wrap:anywhere}.chat-title small{font-size:11px;color:var(--muted);margin-top:5px}.messages{flex:1;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:12px}.empty{margin:auto;text-align:center;color:var(--muted);line-height:2}.bubble{max-width:min(78%,650px);align-self:flex-start;background:#21172f;border:1px solid var(--line);padding:10px 12px;border-radius:13px;overflow-wrap:anywhere}.bubble.mine{align-self:flex-end;background:#392050;border-color:#70469a}.sender{font-size:11px;color:#d7baff;margin-bottom:6px}.content{white-space:pre-wrap;line-height:1.8;font-size:13px}.time{font-size:9px;color:var(--muted);margin-top:6px;text-align:left}.compose{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}.compose input{flex:1;min-width:0}.notice{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#21172f;font-size:12px;line-height:1.8}.modalback{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:16px;z-index:5}.modal{width:min(440px,100%);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.modal h2{margin:0 0 14px;font-size:18px}.toast{position:fixed;bottom:18px;left:18px;max-width:90vw;background:#281b39;border:1px solid var(--purple);padding:12px 15px;border-radius:10px;display:none;z-index:10;font-size:12px;line-height:1.7}.help{font-size:11px;color:var(--muted);line-height:1.8}
+@media(max-width:760px){.shell{padding:6px}.app{height:auto;min-height:calc(100vh - 12px);display:flex;flex-direction:column}.side{max-height:42vh}.main{min-height:55vh}.messages{min-height:220px;padding:10px}.top{padding:11px}.bubble{max-width:92%}.side-bottom button{flex:1}}
+</style>
+</head>
+<body><div class="shell">
+<section id="authView" class="auth"><div class="brand">Nbdy<span>CH4T</span></div><p class="muted">گفت‌وگوهای خودت، این بار آنلاین.</p><div class="notice">برای استفاده از نسخهٔ آنلاین، ابتدا حساب بساز یا وارد شو.</div><div class="field"><label for="email">ایمیل</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="password">رمز عبور</label><input id="password" type="password" autocomplete="current-password" placeholder="حداقل ۶ کاراکتر"></div><div class="actions"><button id="signIn" class="primary">ورود</button><button id="signUp">ساخت حساب</button></div><div id="authStatus" class="status"></div><p class="help">اگر تأیید ایمیل در سوپابیس روشن باشد، بعد از ثبت‌نام ایمیلت را تأیید کن و سپس وارد شو.</p></section>
+<section id="appView" class="app hidden"><aside class="side"><div class="brand">Nbdy<span>CH4T</span></div><div class="profile"><div id="myAvatar" class="avatar">م</div><div class="profile-info"><b id="myName">(مهمان)</b><small id="myId">بدون آیدی عمومی</small></div><button id="editProfile" title="ویرایش پروفایل">⚙</button></div><div class="section-title"><b>گروه‌های من</b><button id="newGroup">＋ ساخت</button></div><div id="myGroups" class="list"></div><div class="section-title"><b>پیدا کردن گروه</b></div><input id="searchGroups" placeholder="جست‌وجوی نام گروه..."/><div id="searchResults" class="list"></div><div class="section-title"><b>کاربران آنلاین</b><span id="onlineCount" class="muted small">۰ نفر</span></div><div id="onlineUsers" class="list"></div><div class="side-bottom"><button id="refresh">بروزرسانی</button><button id="signOut">خروج</button></div><p class="help">پیام‌ها و گروه‌ها بین کاربران حساب‌های مختلف ذخیره می‌شوند. چت خصوصی با کاربران آنلاین فعال است. ارسال فایل در نسخه بعدی اضافه می‌شود.</p></aside><main class="main"><header class="top"><div class="chat-title"><b id="activeName">به NbdyCH4T خوش اومدی</b><small id="activeInfo">برای شروع یک گروه انتخاب کن یا بساز.</small></div><div class="actions"><button id="leaveGroup" class="hidden">ترک گروه</button><button id="backToWelcome" class="hidden">بازگشت</button></div></header><div id="messages" class="messages"><div class="empty">از فهرست کناری یک گروه انتخاب کن.<br>پیام‌ها پس از ارسال در دیتابیس ذخیره می‌شوند.</div></div><form id="sendForm" class="compose hidden"><input id="messageText" maxlength="4000" placeholder="پیامت رو بنویس..." autocomplete="off"><button class="primary" type="submit">ارسال ↵</button></form></main></section>
+</div><div id="modalBack" class="modalback"><div id="modal" class="modal"></div></div><div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// مقادیر اتصال Supabase
+const SUPABASE_URL = 'https://ymwbgdvfyqgpvivysbtv.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_SFPvXnO9ux8LVtXt8cXUZA_WxAUTVM_';
+
+(()=>{
+const $=id=>document.getElementById(id);
+let db=null,me=null,profile=null,groups=[],activeGroup=null,activeDM=null,chatChannel=null,onlineChannel=null,dmChannel=null,loadingMessages=false,onlineUsers={};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(s){$('toast').textContent=s;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',3500)}
+function authStatus(s){$('authStatus').textContent=s}
+function configured(){return SUPABASE_URL.startsWith('https://')&&SUPABASE_PUBLISHABLE_KEY.length>20&&window.supabase}
+function setLoggedIn(on){$('authView').classList.toggle('hidden',on);$('appView').classList.toggle('hidden',!on)}
+function avatarText(name){return (name||'م').trim().slice(0,1)||'م'}
+async function ensureProfile(){
+ const {data,error}=await db.from('profiles').select('*').eq('id',me.id).maybeSingle();
+ if(error)throw error;
+ if(data){profile=data;return}
+ const {data:created,error:e}=await db.from('profiles').insert({id:me.id,username:me.email?.split('@')[0]||'کاربر',public_id:null,bio:''}).select().single();
+ if(e)throw e;profile=created;
+}
+function renderProfile(){$('myName').textContent=profile?.username||'کاربر';$('myId').textContent=profile?.public_id?'@'+profile.public_id:'بدون آیدی عمومی';$('myAvatar').textContent=avatarText(profile?.username)}
+async function loadGroups(){
+ const {data,error}=await db.from('group_members').select('group_id,chat_groups(id,name,description,owner_id,created_at)').eq('user_id',me.id);
+ if(error)throw error;groups=(data||[]).map(x=>x.chat_groups).filter(Boolean);renderGroups();await searchGroups();
+}
+function renderGroups(){
+ $('myGroups').innerHTML='';
+ if(!groups.length)$('myGroups').innerHTML='<div class="help">هنوز عضو گروهی نیستی.</div>';
+ groups.forEach(g=>{const b=document.createElement('button');b.className='group-item'+(activeGroup?.id===g.id?' active':'');b.innerHTML=`<div class="avatar">#</div><div class="info"><b>${esc(g.name)}</b><small>${esc(g.description||'گروه NbdyCH4T')}</small></div>`;b.onclick=()=>openGroup(g);$('myGroups').append(b)});
+}
+async function searchGroups(){
+ const q=$('searchGroups').value.trim();let query=db.from('chat_groups').select('id,name,description,owner_id').order('created_at',{ascending:false}).limit(30);
+ if(q)query=query.ilike('name','%'+q.replace(/[%_,]/g,'')+'%');
+ const {data,error}=await query;
+ if(error){$('searchResults').innerHTML='<div class="help">جست‌وجو در دسترس نیست.</div>';return}
+ const found=data||[];$('searchResults').innerHTML='';
+ found.filter(g=>!groups.some(m=>m.id===g.id)).forEach(g=>{
+  const row=document.createElement('div');row.className='group-item';row.innerHTML=`<div class="avatar">#</div><div class="info"><b>${esc(g.name)}</b><small>${esc(g.description||'گروه')}</small></div><button>عضویت</button>`;
+  row.querySelector('button').onclick=()=>joinGroup(g);$('searchResults').append(row);
+ });
+ if(!found.some(g=>!groups.some(m=>m.id===g.id)))$('searchResults').innerHTML='<div class="help">گروه تازه‌ای پیدا نشد.</div>';
+}
+async function joinGroup(g){
+ const {error}=await db.from('group_members').insert({group_id:g.id,user_id:me.id});
+ if(error){if(error.code==='23505')return toast('از قبل عضو این گروهی.');return toast('عضویت ناموفق: '+error.message)}
+ await loadGroups();await openGroup(groups.find(x=>x.id===g.id)||g);toast('به گروه اضافه شدی.');
+}
+function stopChatSubscription(){if(chatChannel){db.removeChannel(chatChannel);chatChannel=null}}
+function stopDMSubscription(){if(dmChannel){db.removeChannel(dmChannel);dmChannel=null}}
+function stopOnline(){if(onlineChannel){db.removeChannel(onlineChannel);onlineChannel=null}onlineUsers={};renderOnlineUsers()}
+function resetActiveChat(){
+ stopChatSubscription();stopDMSubscription();activeGroup=null;activeDM=null;
+ $('sendForm').classList.add('hidden');$('leaveGroup').classList.add('hidden');$('backToWelcome').classList.add('hidden');
+ $('activeName').textContent='به NbdyCH4T خوش اومدی';$('activeInfo').textContent='یک گروه یا کاربر آنلاین انتخاب کن.';
+ $('messages').innerHTML='<div class="empty">برای شروع، یک گروه یا کاربر آنلاین انتخاب کن.</div>';renderGroups();
+}
+async function openGroup(g){
+ stopChatSubscription();stopDMSubscription();activeGroup=g;activeDM=null;renderGroups();
+ $('activeName').textContent=g.name;$('activeInfo').textContent=g.description||'گفت‌وگوی گروهی';
+ $('sendForm').classList.remove('hidden');$('leaveGroup').classList.remove('hidden');$('backToWelcome').classList.add('hidden');
+ await loadMessages();chatChannel=db.channel('group-messages-'+g.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'messages',filter:'group_id=eq.'+g.id},()=>loadMessages()).subscribe();
+}
+async function openDM(user){
+ if(!user||user.id===me.id)return;
+ stopChatSubscription();stopDMSubscription();activeGroup=null;activeDM=user;renderGroups();
+ $('activeName').textContent=user.username||'کاربر';$('activeInfo').textContent=(user.public_id?'@'+user.public_id+' · ':'')+(onlineUsers[user.id]?'آنلاین':'گفت‌وگوی خصوصی');
+ $('sendForm').classList.remove('hidden');$('leaveGroup').classList.add('hidden');$('backToWelcome').classList.remove('hidden');
+ await loadMessages();
+ dmChannel=db.channel('private-messages-'+me.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'direct_messages'},payload=>{
+   const m=payload.new;if(m&&(m.sender_id===me.id&&m.recipient_id===activeDM?.id||m.sender_id===activeDM?.id&&m.recipient_id===me.id))loadMessages();
+ }).subscribe();
+}
+async function loadMessages(){
+ if(loadingMessages||(!activeGroup&&!activeDM))return;
+ loadingMessages=true;const groupId=activeGroup?.id,dmId=activeDM?.id;
+ try{
+  let data,error;
+  if(groupId){
+   const r=await db.from('messages').select('id,group_id,sender_id,content,created_at,profiles(username,public_id)').eq('group_id',groupId).order('created_at',{ascending:true}).limit(250);data=r.data;error=r.error;
+  }else{
+   const filter=`and(sender_id.eq.${me.id},recipient_id.eq.${dmId}),and(sender_id.eq.${dmId},recipient_id.eq.${me.id})`;
+   const r=await db.from('direct_messages').select('id,sender_id,recipient_id,content,created_at').or(filter).order('created_at',{ascending:true}).limit(250);data=r.data;error=r.error;
+  }
+  if(error)throw error;
+  if(groupId&&activeGroup?.id!==groupId||dmId&&activeDM?.id!==dmId)return;
+  const box=$('messages');box.innerHTML='';
+  if(!data?.length){box.innerHTML=`<div class="empty">${groupId?'این گروه تازه شروع شده.<br>اولین پیام رو بفرست.':'گفت‌وگوی خصوصی شروع نشده.<br>اولین پیام رو بفرست.'}</div>`;return}
+  data.forEach(m=>{
+   const mine=m.sender_id===me.id;const d=document.createElement('div');d.className='bubble'+(mine?' mine':'');
+   const sender=groupId?(m.profiles?.username||'کاربر'):(mine?(profile?.username||'من'):(activeDM?.username||'کاربر'));
+   const publicId=groupId?m.profiles?.public_id:null;const date=new Date(m.created_at);
+   d.innerHTML=`${(!mine||groupId)?`<div class="sender">${esc(sender)}${publicId?' · @'+esc(publicId):''}</div>`:''}<div class="content">${esc(m.content)}</div><div class="time">${date.toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'})}</div>`;
+   box.append(d);
+  });
+  box.scrollTop=box.scrollHeight;
+ }catch(e){toast('دریافت پیام ناموفق بود: '+e.message)}finally{loadingMessages=false}
+}
+function renderOnlineUsers(){
+ const box=$('onlineUsers');if(!box)return;box.innerHTML='';
+ const list=Object.values(onlineUsers).filter(u=>u.id!==me?.id);
+ $('onlineCount').textContent=new Intl.NumberFormat('fa-IR').format(list.length)+' نفر';
+ if(!list.length){box.innerHTML='<div class="help">فعلاً کاربر دیگری آنلاین نیست.</div>';return}
+ list.sort((a,b)=>(a.username||'').localeCompare(b.username||'')).forEach(u=>{
+  const b=document.createElement('button');b.className='group-item'+(activeDM?.id===u.id?' active':'');
+  b.innerHTML=`<div class="avatar" style="position:relative">${esc(avatarText(u.username))}<span style="position:absolute;width:9px;height:9px;border-radius:50%;background:#5be39b;bottom:-1px;right:-1px;border:2px solid #15101f"></span></div><div class="info"><b>${esc(u.username||'کاربر')}</b><small>${u.public_id?'@'+esc(u.public_id):'آنلاین · شروع چت'}</small></div>`;
+  b.onclick=()=>openDM(u);box.append(b);
+ });
+}
+async function startPresence(){
+ stopOnline();
+ onlineChannel=db.channel('nbdychat-online',{config:{presence:{key:me.id}}});
+ onlineChannel.on('presence',{event:'sync'},()=>{
+  const state=onlineChannel.presenceState();const map={};
+  Object.values(state).flat().forEach(p=>{if(p.user_id&&p.user_id!==me.id)map[p.user_id]={id:p.user_id,username:p.username||'کاربر',public_id:p.public_id||null}});
+  onlineUsers=map;renderOnlineUsers();
+  if(activeDM)$('activeInfo').textContent=(activeDM.public_id?'@'+activeDM.public_id+' · ':'')+(onlineUsers[activeDM.id]?'آنلاین':'آفلاین');
+ }).subscribe(async status=>{if(status==='SUBSCRIBED'){await onlineChannel.track({user_id:me.id,username:profile?.username||'کاربر',public_id:profile?.public_id||null,online_at:new Date().toISOString()})}});
+}
+$('signIn').onclick=async()=>{
+ if(!db)return toast('تنظیمات Supabase را بررسی کن.');const email=$('email').value.trim(),password=$('password').value;
+ if(!email||!password)return authStatus('ایمیل و رمز عبور را وارد کن.');authStatus('در حال ورود...');
+ const {error}=await db.auth.signInWithPassword({email,password});authStatus(error?error.message:'ورود انجام شد.');
+};
+$('signUp').onclick=async()=>{
+ if(!db)return toast('تنظیمات Supabase را بررسی کن.');const email=$('email').value.trim(),password=$('password').value;
+ if(!email||password.length<6)return authStatus('ایمیل معتبر و رمز حداقل ۶ کاراکتری وارد کن.');authStatus('در حال ساخت حساب...');
+ const {data,error}=await db.auth.signUp({email,password});if(error)return authStatus(error.message);authStatus(data.session?'حساب ساخته شد.':'حساب ساخته شد؛ اگر تأیید ایمیل روشن است ایمیلت را تأیید کن و وارد شو.');
+};
+$('signOut').onclick=async()=>{stopChatSubscription();stopDMSubscription();stopOnline();await db.auth.signOut();me=null;profile=null;groups=[];resetActiveChat();setLoggedIn(false)};
+$('refresh').onclick=async()=>{try{await ensureProfile();renderProfile();await loadGroups();startPresence();if(activeGroup||activeDM)await loadMessages();toast('بروزرسانی شد.')}catch(e){toast(e.message)}};
+$('searchGroups').oninput=()=>searchGroups();
+$('sendForm').onsubmit=async e=>{
+ e.preventDefault();const content=$('messageText').value.trim();if(!content||(!activeGroup&&!activeDM))return;
+ let result;
+ if(activeGroup)result=await db.from('messages').insert({group_id:activeGroup.id,sender_id:me.id,content});
+ else result=await db.from('direct_messages').insert({sender_id:me.id,recipient_id:activeDM.id,content});
+ if(result.error)return toast('ارسال پیام ناموفق بود: '+result.error.message);
+ $('messageText').value='';await loadMessages();
+};
+$('newGroup').onclick=()=>{
+ showModal(`<h2>ساخت گروه</h2><div class="field"><label>نام گروه</label><input id="gName" maxlength="60" placeholder="مثلاً گروه دوستان"></div><div class="field"><label>توضیحات</label><textarea id="gDesc" maxlength="250" rows="3" placeholder="دربارهٔ گروه"></textarea></div><div class="actions"><button class="primary" id="createIt">ساخت گروه</button><button id="cancelModal">لغو</button></div>`);
+ $('cancelModal').onclick=closeModal;$('createIt').onclick=async()=>{
+  const name=$('gName').value.trim(),description=$('gDesc').value.trim();if(!name)return toast('اسم گروه را وارد کن.');
+  const {data,error}=await db.from('chat_groups').insert({name,description,owner_id:me.id}).select().single();if(error)return toast('ساخت گروه ناموفق بود: '+error.message);
+  const {error:memberError}=await db.from('group_members').insert({group_id:data.id,user_id:me.id});if(memberError)return toast('گروه ساخته شد اما عضویت ناموفق بود: '+memberError.message);
+  closeModal();await loadGroups();await openGroup(data);toast('گروه ساخته شد.');
+ };
+};
+$('editProfile').onclick=()=>{
+ showModal(`<h2>ویرایش پروفایل</h2><div class="field"><label>نام نمایشی</label><input id="pName" maxlength="40" value="${esc(profile?.username||'کاربر')}"></div><div class="field"><label>آیدی عمومی انگلیسی (اختیاری)</label><input id="pId" maxlength="24" placeholder="بدون @؛ اختیاری" value="${esc(profile?.public_id||'')}"></div><div class="field"><label>بیو</label><textarea id="pBio" rows="3" maxlength="250">${esc(profile?.bio||'')}</textarea></div><div class="actions"><button id="saveProfile" class="primary">ذخیره</button><button id="cancelModal">لغو</button></div>`);
+ $('cancelModal').onclick=closeModal;$('saveProfile').onclick=async()=>{
+  const username=$('pName').value.trim(),raw=$('pId').value.trim().replace(/^@/,''),bio=$('pBio').value.trim();
+  if(!username)return toast('نام را وارد کن.');if(raw&&!/^[A-Za-z0-9_]{2,24}$/.test(raw))return toast('آیدی باید ۲ تا ۲۴ حرف انگلیسی، عدد یا زیرخط باشد.');
+  const {data,error}=await db.from('profiles').update({username,public_id:raw||null,bio}).eq('id',me.id).select().single();
+  if(error)return toast('ذخیره ناموفق بود: '+(error.code==='23505'?'این آیدی قبلاً گرفته شده.':error.message));
+  profile=data;renderProfile();closeModal();await startPresence();toast('پروفایل ذخیره شد.');
+ };
+};
+$('leaveGroup').onclick=async()=>{
+ if(!activeGroup)return;const g=activeGroup;const {error}=await db.from('group_members').delete().eq('group_id',g.id).eq('user_id',me.id);
+ if(error)return toast('ترک گروه ناموفق بود: '+error.message);resetActiveChat();await loadGroups();
+};
+$('backToWelcome').onclick=resetActiveChat;
+function showModal(html){$('modal').innerHTML=html;$('modalBack').style.display='grid'}
+function closeModal(){$('modalBack').style.display='none'}
+$('modalBack').onclick=e=>{if(e.target===$('modalBack'))closeModal()};
+async function start(session){
+ me=session.user;
+ try{await ensureProfile();renderProfile();setLoggedIn(true);await loadGroups();await startPresence();if(groups.length)await openGroup(groups[0]);else resetActiveChat()}
+ catch(e){setLoggedIn(false);authStatus('خطا در بارگذاری: '+e.message+' — SQL راه‌اندازی را اجرا کن و دسترسی جدول‌ها را بررسی کن.')}
+}
+if(configured()){
+ db=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+ db.auth.getSession().then(({data})=>{if(data.session)start(data.session)});
+ db.auth.onAuthStateChange((event,session)=>{if(session&&!me)start(session);if(!session&&me){stopChatSubscription();stopDMSubscription();stopOnline();me=null;profile=null;groups=[];resetActiveChat();setLoggedIn(false)}});
+}else{
+ authStatus('تنظیمات Supabase معتبر نیستند. SUPABASE_URL و SUPABASE_PUBLISHABLE_KEY را بررسی کن.');
+ $('signIn').onclick=()=>toast('تنظیمات Supabase را بررسی کن.');$('signUp').onclick=()=>toast('تنظیمات Supabase را بررسی کن.');
+}
+})();
+</script></body></html>
